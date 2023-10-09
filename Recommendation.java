@@ -3,7 +3,7 @@ public class Recommendation
 
   /* Instance variable declarations go here, before constructors */
   // STEP 1 of 4: Add one private instance variable
-
+    xxxxxxxxxxxx
 
   /* No Argument Constructor - same name as Class, no return type */
   public Recommendation()
