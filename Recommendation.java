@@ -17,6 +17,7 @@ public class Recommendation
   private String date;
   private int dislikes;
   private boolean hasImage;
+  private int starRating;
   
   
 
@@ -40,9 +41,7 @@ public class Recommendation
       numOfRecommendations = 0
       comment = " ";
       commentList = new String[0];
-
-
-
+      starRating = 0;
   }
   
   /* Method definitions go here, after constructors */
@@ -91,6 +90,10 @@ public class Recommendation
   public String getAuthor(){
     return author;
   }
+
+  public int getStarRating(){
+    return starRating;
+  }
   
   //  STEP 4 of 4: Add one mutator method (setter) for your instance variable
   public void addViews(){
@@ -134,7 +137,13 @@ public class Recommendation
     hasImage = _hasImage;
   }
 
-
-
-
+  public void setStarRating(int _starRating){
+    if (_starRating < 0){
+      _starRating = 0;
+    };
+    if (_starRating > 10){
+      _starRating = 10;
+    };
+    starRating = _starRating;
+  }
 }
