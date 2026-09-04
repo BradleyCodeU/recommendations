@@ -18,14 +18,15 @@
   <style>
     .hiddenText {
       display: none;
-      visibility: hidden;
       opacity: 0;
-      transition: opacity 1s, visibility 1s;
+      transition: opacity 1s, display 1s allow-discrete;
     }
     li:hover .hiddenText {
       display: inline;
-      visibility: visible;
       opacity: 1;
+      @starting-style {
+        opacity: 0;
+      }
     }
   </style>
 </head>
