@@ -18,11 +18,14 @@
   <style>
     .hiddenText {
       display: none;
-      transition: all 1s;
+      visibility: hidden;
+      opacity: 0;
+      transition: display 1s;
     }
-    
     h3:hover .hiddenText {
       display: inline;
+      visibility: visible;
+      opacity: 1;
     }
   </style>
 </head>
@@ -60,6 +63,7 @@
       <li class="nav-item text-light" id="nav_tv" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="TV">
         <a class="nav-link" href="?filter=tv">
           <h3 class="navbarHeading">
+            <span class="hiddenText">TV </span>
             <svg role="img" aria-label="a tv screen" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tv" viewBox="0 0 16 16">
               <path d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5M13.991 3l.024.001a1.5 1.5 0 0 1 .538.143.76.76 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.5 1.5 0 0 1-.143.538.76.76 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.5 1.5 0 0 1-.538-.143.76.76 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.5 1.5 0 0 1 .143-.538.76.76 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2"/>
             </svg>
@@ -69,6 +73,7 @@
       <li class="nav-item text-light" id="nav_food" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Food">
         <a class="nav-link" href="?filter=food">
           <h3 class="navbarHeading">
+            <span class="hiddenText">Food </span>
             <svg role="img" aria-label="a fork and a knife" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fork-knife" viewBox="0 0 16 16">
               <path d="M13 .5c0-.276-.226-.506-.498-.465-1.703.257-2.94 2.012-3 8.462a.5.5 0 0 0 .498.5c.56.01 1 .13 1 1.003v5.5a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5zM4.25 0a.25.25 0 0 1 .25.25v5.122a.128.128 0 0 0 .256.006l.233-5.14A.25.25 0 0 1 5.24 0h.522a.25.25 0 0 1 .25.238l.233 5.14a.128.128 0 0 0 .256-.006V.25A.25.25 0 0 1 6.75 0h.29a.5.5 0 0 1 .498.458l.423 5.07a1.69 1.69 0 0 1-1.059 1.711l-.053.022a.92.92 0 0 0-.58.884L6.47 15a.971.971 0 1 1-1.942 0l.202-6.855a.92.92 0 0 0-.58-.884l-.053-.022a1.69 1.69 0 0 1-1.059-1.712L3.462.458A.5.5 0 0 1 3.96 0z"/>
             </svg>
@@ -78,6 +83,7 @@
       <li class="nav-item text-light" id="nav_books" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Books">
         <a class="nav-link" href="?filter=books">
           <h3 class="navbarHeading">
+            <span class="hiddenText">Books </span>
             <svg role="img" aria-label="a book" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
               <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"/>
             </svg>
@@ -87,6 +93,7 @@
       <li class="nav-item text-light" id="nav_music" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Music">
         <a class="nav-link" href="?filter=music">
           <h3 class="navbarHeading">
+            <span class="hiddenText">Music </span>
             <svg role="img" aria-label="music notes" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-music-note-beamed" viewBox="0 0 16 16">
               <path d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13s1.12-2 2.5-2 2.5.896 2.5 2m9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2"/>
               <path fill-rule="evenodd" d="M14 11V2h1v9zM6 3v10H5V3z"/>
@@ -98,15 +105,17 @@
       <li class="nav-item text-light" id="nav_other" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Other">
         <a class="nav-link" href="?filter=other">
           <h3 class="navbarHeading">
+            <span class="hiddenText">Other </span>
             <svg role="img" aria-label="a globe showing the Americas" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe-americas" viewBox="0 0 16 16">
               <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484q-.121.12-.242.234c-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 1 2.04 4.327Z"/>
             </svg>
           </h3>
         </a>
       </li>
-      <li class="nav-item text-light active" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Recommendations Home">
+      <li class="nav-item text-light active" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Home">
         <a class="nav-link" href="https://bradleycodeu.github.io/recommendations/">
           <h3 class="navbarHeading">
+            <span class="hiddenText">Home </span>
             <svg role="img" aria-label="a house with and open door" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
               <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"/>
             </svg>
